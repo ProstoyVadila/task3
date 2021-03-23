@@ -1,6 +1,6 @@
-from typing import NamedTuple, Optional
+from typing import NamedTuple, Optional, List
 
-from app import IntervalsModel
+from main import IntervalsModel
 
 
 class TimeStamp(NamedTuple):
@@ -8,7 +8,7 @@ class TimeStamp(NamedTuple):
     end: int
 
 
-def create_timestamps(items: list[int]) -> list[TimeStamp]:
+def create_timestamps(items: List[int]) -> List[TimeStamp]:
     list_ = []
     for i in range(1, len(items), 2):
         list_.append(TimeStamp(start=items[i-1], end=items[i]))
@@ -24,7 +24,7 @@ def get_overlap(x_start: int, x_end: int, y_start: int, y_end: int) -> Optional[
         return None
 
 
-def get_sum_and_overlaps(x_list: list[TimeStamp], y_list: list[TimeStamp]) -> [list[TimeStamp], int]:
+def get_sum_and_overlaps(x_list: List[TimeStamp], y_list: List[TimeStamp]) -> [List[TimeStamp], int]:
     overlaps = []
     sum_ = 0
 
