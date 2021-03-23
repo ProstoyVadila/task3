@@ -9,7 +9,7 @@ uvicorn main:app --reload -p 8000
 or with docker
 ```
 docker build -t task3_image .
-docker run -d --name task3_container -p 8000:80 task3
+docker run -d --name task3_container -p 8000:80 task3_image
 ```
 
 ## Endpoint
