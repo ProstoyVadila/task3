@@ -4,7 +4,7 @@ counter of appearances for three lists of timestamp intervals with one endpoint 
 ## To launch
 ```
 pip install -r requirements.txt
-uvicorn main:app --reload -p 8000
+uvicorn main:app --reload --port 8000
 ```
 or with docker
 ```
